@@ -26,7 +26,7 @@ def create_rag_chain(retriever):
     {
         "context": retriever | RunnableLambda(format_docs),
         "question": RunnablePassthrough(),
-        "chat_history": st.session_state.chat_history
+        
     }
 )
 

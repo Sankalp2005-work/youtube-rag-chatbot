@@ -1,20 +1,29 @@
-from langchain_core.prompts import (
-    ChatPromptTemplate,
-    MessagesPlaceholder,
-)
+from langchain_core.prompts import ChatPromptTemplate
 
-prompt = ChatPromptTemplate.from_messages([
-    (
-        "system",
-        """
+prompt = ChatPromptTemplate.from_template(
+"""
 You are an expert AI assistant.
 
-Use ONLY the transcript context.
+Answer ONLY using the provided transcript context.
 
-Context:
+If the answer is not in the transcript, reply:
+
+"I couldn't find that information in the video."
+
+------------------------
+
+
+------------------------
+Transcript Context
+
 {context}
+
+------------------------
+Current Question
+
+{question}
+
+------------------------
+Answer
 """
-    ),
-    MessagesPlaceholder("chat_history"),
-    ("human", "{question}")
-])
+)

@@ -1,5 +1,6 @@
 
 import streamlit as st
+import traceback
 
 from utils.youtube import get_youtube_video_id
 from utils.transcript import get_transcript
@@ -211,7 +212,7 @@ if process:
 
         st.error(str(e))
 
-       
+        traceback.print_exc()
 
         # -------------------------------------------------------
 # Chat Section
