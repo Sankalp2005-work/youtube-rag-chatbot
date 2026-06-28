@@ -224,6 +224,8 @@ streamlit run app.py
 * Large Language Models
 * Streamlit Application Development
 
+"Transcript retrieval is intended for local execution and may be restricted on some cloud providers due to YouTube IP blocking."
+
 ---
 
 ## 👨‍💻 Author
